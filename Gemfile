@@ -20,7 +20,9 @@ gem 'activerecord'
 
 gem 'rake'
 
-gem 'shotgun'		
+gem 'shotgun'
+
+gem 'httparty'
 
 group :test do
   gem 'shoulda-matchers'
@@ -33,5 +35,6 @@ group :test, :development do
   gem 'rspec'
   gem 'factory_girl'
   gem 'faker'
+  gem 'pry-byebug'
 end
 
