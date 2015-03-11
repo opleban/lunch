@@ -1,5 +1,5 @@
 # Todo - MVP
-* [] Create landing page with address form
+* [X] Create landing page with address form
 * [] On submission of form, hit geocode API
   - on success, backend sends back geoCodeDto, 200 status
   - on error, backend sends back error with message 'could not find address'
