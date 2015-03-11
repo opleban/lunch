@@ -3,9 +3,19 @@
   margin-top: 8em;
   margin-left: auto;
   margin-right: auto;
-  width: 20em;
+  width: 30em;
   height: 20em;
-  padding: 2em;
+  padding: 1em;
   border: 1px solid black;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.label-field {
+  text-align: left;
+  float: left;
+  width: 4em;
 }
 
