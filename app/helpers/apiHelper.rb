@@ -10,4 +10,26 @@ helpers do
       return nil
     end
   end
+
+  def get_restaurants(lat_long_hash)
+    options = { body:
+      {
+        api_key: ENV['LOCU_API_KEY'],
+        fields: ['name', 'location', 'contact'],
+        venue_queries: [
+          {
+            location: {
+              geo: {
+                "$in_lat_lng_radius" => [lat_long_hash[:lat], lat_long_hash[:long], 5000]
+              }
+            }
+          }
+        ]
+      }.to_json
+    }
+
+    p options
+    response = HTTParty.post("https://api.locu.com/v2/venue/search", options)
+    p response
+  end
 end
